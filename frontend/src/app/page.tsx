@@ -8,6 +8,7 @@ import PaginationComp from "@/components/pagination";
 import UserTable from "@/components/users-table";
 import usePagesAPIQuery from "@/hooks/use-user-pages";
 import { useState } from "react";
+import { ShieldUser } from "lucide-react";
 
 function UsersTable() {
 	const [currPage, setCurrPage] = useState(1);
@@ -28,13 +29,17 @@ function UsersTable() {
 
 	return (
 		<section className="max-w-screen-xl mx-auto my-12">
-			<div className="flex justify-between items-center">
-				<div className="flex flex-col gap-2">
-					<h1 className="text-4xl font-bold">User Management</h1>
-					<h3 className="text-lg">
-						Please build your UI here, everything and all things are
-						upto you in this repository / on this page.
-					</h3>
+			<div className="flex justify-between gap-4 items-center">
+				<div className="flex  items-center gap-2">
+					<p className="p-4 rounded-full bg-accent">
+						<ShieldUser className="sha w-8 h-8" />
+					</p>
+					<p>
+						<h1 className="text-4xl font-bold">User Management</h1>
+						<h3 className="text-gray-400">
+							Manage you team member and their permission
+						</h3>
+					</p>
 				</div>
 				<ThemeToggle />
 			</div>
